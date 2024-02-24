@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clientesIndex.css')}}">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Lista Clientes</h1>
+        <table>
+            <tr>
+                <th>idClientes</th>
+                <th>nombreClientes</th>
+                <th>cedulaClientes</th>
+                <th>correoClientes</th>
+                <th>password</th>
+            </tr>
+            {% for cliente in data %}
+            <tr>
+                <td>{{ cliente.idClientes }}</td>
+                <td>{{ cliente.nombreClientes }}</td>
+                <td>{{ cliente.cedulaClientes }}</td>
+                <td>{{ cliente.correoClientes }}</td>
+                <td>{{ cliente.password }}</td>
+                <td>
+                    <a href="{{ url_for('clientes.edit', idClientes=cliente.idClientes) }}">Editar</a>
+                    <a href="{{ url_for('clientes.delete', idClientes=cliente.idClientes) }}">Eliminar</a>
+                    <!-- Agrega aquí el enlace para eliminar -->
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('clientes.add') }}">Agregar clientes</a>
+        <br>
+        <a href="{{ url_for('productos.index') }}">Ir a productos</a>
+        <br>
+        <a href="{{ url_for('autentificacionBp.dashboard') }}">Ir A Dashboard</a>
+
+    </div>
+</body>
+
+</html>

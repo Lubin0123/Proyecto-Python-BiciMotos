@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/productosIndex.css')}}">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Lista de Productos</h1>
+        <table>
+            <tr>
+                <th>idProductos</th>
+                <th>descripcionProductos</th>
+                <th>precioProductos</th>
+                <th>cantidadProductos</th>
+            </tr>
+            {% for producto in data %}
+            <tr>
+                <td>{{ producto.idProductos }}</td>
+                <td>{{ producto.descripcionProductos }}</td>
+                <td>{{ producto.precioProductos }}</td>
+                <td>{{ producto.cantidadProductos }}</td>
+                <td>
+                    <a href="{{ url_for('productos.edit', idProductos=producto.idProductos) }}">Editar</a>
+                    <a href="{{ url_for('productos.delete', idProductos=producto.idProductos) }}">Eliminar</a>
+                    <!-- Agrega aquí el enlace para eliminar -->
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('productos.add') }}">Agregar producto</a>
+        <br>
+        <a href="{{ url_for('clientes.index') }}">Ir a clientes</a>
+        <br>
+        <a href="{{ url_for('autentificacionBp.dashboard') }}">Ir A Dashboard</a>
+    </div>
+</body>
+
+</html>
