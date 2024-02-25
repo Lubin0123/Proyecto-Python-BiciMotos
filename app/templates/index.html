@@ -48,6 +48,7 @@
                     <input type="hidden" name="informacionProductos" id="informacionProductos" value="{{ elProducto.descripcionProductos }}">
                     <p class="producto" name="producto" value="">{{ elProducto.descripcionProductos }}</p>
                     <input type="hidden" name="precioProducto" id="precioProducto" value="{{ elProducto.precioProductos }}">
+                    <p class="producto" name="producto" value=""> {{ elProducto.precioProductos }}</p>
                     {% if current_user.is_authenticated %}
                     <button class="btcontar" type="submit" name="accion" value="insertar">Agregar</button>
                     {%else%}

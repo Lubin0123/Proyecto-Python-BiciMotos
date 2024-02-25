@@ -1,111 +1,111 @@
- body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: #fff; /* Fondo oscuro */
-            color: #fff; /* Texto blanco */
-            display: flex;
-            flex-direction: row;
-        }
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    display: flex;
+    flex-direction: row;
+}
 
-        .container {
-            display: flex;
-        }
+.container {
+    display: flex;
+}
 
-        .seccion-izquierda {
-            flex: 2;
-            padding: 150px;
-            height: 100%;
-        }
+.seccion-izquierda {
+    flex: 2;
+    padding: 150px;
+    height: 100%;
+}
 
-        .seccion-derecha {
-            flex: 1;
-            padding: 10px;
-            height: 100%;
-            margin-top: 50px;
-        }
+.seccion-derecha {
+    flex: 1;
+    padding: 10px;
+    height: 100%;
+    margin-top: 50px;
+}
 
-        .titulo {
-            margin: 0;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-size: 2.5em; /* Tamaño del título */
-            color: #007bff; /* Color del título */
-        }
+.titulo {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 2.5em; /* Tamaño del título */
+    color: #007bff; /* Color del título */
+}
 
-        h1 {
-            text-align: center;
-        }
+h1 {
+    text-align: center;
+}
 
-        .form-group label {
-            color: #fff;
-            font-size: 1.2em; /* Tamaño de la etiqueta del formulario */
-        }
+.form-group label {
+    color: #000f;
+    font-size: 1.2em; /* Tamaño de la etiqueta del formulario */
+}
 
-        .form-control {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.1);
-            color: #000000;; /* Fondo oscuro del campo de entrada */
-            color: #fff;
-            border: 1px solid #555; /* Borde gris oscuro */
-            padding: 15px;
-            box-sizing: border-box;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+.form-control {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000000;; /* Fondo oscuro del campo de entrada */
+    color: #000000;
+    border: 1px solid #555; /* Borde gris oscuro */
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
 
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            color: #fff;
-            transition: background-color 0.3s ease;
-            font-size: 1.2em; /* Tamaño del texto del botón */
-        }
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em; /* Tamaño del texto del botón */
+}
 
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
+.btn-primary:hover {
+    background-color: #0056b3;
+}
 
-        .flash-messages {
-            list-style: none;
-            padding: 0;
-        }
+.flash-messages {
+    list-style: none;
+    padding: 0;
+}
 
-        .flash-messages h5 {
-            margin-bottom: 10px;
-            color: #ff4d4d; /* Color de mensaje de error */
-        }
+.flash-messages h5 {
+    margin-bottom: 10px;
+    color: #ff4d4d; /* Color de mensaje de error */
+}
 
-        a {
-            color: #000000;
-            font-size: 1.2em; /* Tamaño del texto del enlace */
-        }
+a {
+    color: #000000;
+    font-size: 1.2em; /* Tamaño del texto del enlace */
+}
 
-        a:hover {
-            color: #0056b3;
-        }
+a:hover {
+    color: #0056b3;
+}
 
-        .seccion-derecha img {
-            margin-bottom: 20px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px; /* Bordes redondeados para la imagen */
-        }
+.seccion-derecha img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+}
 
-        @media only screen and (min-width: 1200px) {
-            .box {
-                flex-basis: calc(33.33% - 20px);
-            }
-        }
+@media only screen and (min-width: 1200px) {
+    .box {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
 
-        @media only screen and (min-width: 768px) and (max-width: 1199px) {
-            .box {
-                flex-basis: calc(50% - 20px);
-            }
-        }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .box {
+        flex-basis: calc(50% - 20px);
+    }
+}
 
-        @media only screen and (max-width: 767px) {
-            .box {
-                flex-basis: 100%;
-            }
-        }
+@media only screen and (max-width: 767px) {
+    .box {
+        flex-basis: 100%;
+    }
+}
