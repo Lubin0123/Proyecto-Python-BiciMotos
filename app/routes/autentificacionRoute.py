@@ -18,7 +18,10 @@ bcrypt = Bcrypt()
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        correoClientes = request.form['correoClientes']
+        if 'correoClientes' in request.form:
+            correoClientes = request.form['correoClientes']
+        else:   flash("correo no coincide") 
+         
         password = request.form['password']
         
         cliente = Clientes.query.filter_by(correoClientes=correoClientes).first()

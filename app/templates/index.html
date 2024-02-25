@@ -42,18 +42,12 @@
         <div class="box">
             
             <form action="/agregar/{{ elProducto.idProductos }}" method="post">
-                
-                <img src="{{ url_for('static', filename='imagenes/' ~ elProducto.nombreImagen) }}"
-                alt="{{ elProducto.nombreImagen }}">
-                
+                <img src="{{ url_for('static', filename='imagenes/' ~ elProducto.nombreImagen) }}" alt="{{ elProducto.nombreImagen }}">
                 <div class="centrarInformacion">
                     <input type="hidden" name="idProducto" value="{{ elProducto.idProductos }}">
-                    <input type="hidden" name="informacion" id="informacion"
-                    value="{{ elProducto.descripcionProductos }}">
+                    <input type="hidden" name="informacionProductos" id="informacionProductos" value="{{ elProducto.descripcionProductos }}">
                     <p class="producto" name="producto" value="">{{ elProducto.descripcionProductos }}</p>
-                    <input type="hidden" name="precioProducto" id="precioProducto"
-                    value="{{ elProducto.precioProductos }}">
-                    <p class="precio" name="precio" value="">{{ elProducto.precioProductos }}</p>
+                    <input type="hidden" name="precioProducto" id="precioProducto" value="{{ elProducto.precioProductos }}">
                     {% if current_user.is_authenticated %}
                     <button class="btcontar" type="submit" name="accion" value="insertar">Agregar</button>
                     {%else%}
@@ -61,7 +55,7 @@
                     {% endif %}
                 </div>
             </form>
-
+            
         </div>
         {% endfor %}
     </div>
