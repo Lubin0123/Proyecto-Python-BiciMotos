@@ -7,7 +7,7 @@ from wtforms import SubmitField
 from wtforms import StringField, PasswordField ,validators
 from flask_bcrypt import Bcrypt
 from app.models.Clientes import Clientes
-from app.models.carritoVentas import carritoVentas
+from app.models.carritoVentas import vaciarcarrito
 
 
 from app import db
@@ -36,7 +36,7 @@ def login():
                 login_user(cliente)
                 flash("Login successful!", "success")
                 
-                carritoVentas.vaciarcarrito()
+                vaciarcarrito(current_user)
                   # Verifica el rol y redirige según el rol
                 if cliente.rol == 'administrador':
                     return redirect(url_for('autentificacionBp.dashboard'))
