@@ -62,7 +62,7 @@ def eliminarDelCarrito(idProductos):
     return render_template('carrito/carritoVentas.html', idProductos=idProductos, carritoVentas=carritoVentas.getItems(), subTotal=subTotal)
 
 @bp.route('/vaciarCarrito/<int:idProductos>',methods=['GET', 'POST'])
-def vaciarCarrito(idProductos):
+def vaciarcarrito(idProductos):
     carritoVaciado = carritoVentas.query.get(idProductos)
     
     if carritoVaciado:
