@@ -7,11 +7,11 @@ from wtforms import SubmitField
 from wtforms import StringField, PasswordField ,validators
 from flask_bcrypt import Bcrypt
 from app.models.Clientes import Clientes
-from app.models.carritoVentas import CarritoVentas
+from app.models.carritoVentas import carritoVentas
 
 
 from app import db
-carritoVentas = CarritoVentas()
+# carritoVentas = CarritoVentas()
 
 bp = Blueprint('autentificacionBp', __name__)
 
