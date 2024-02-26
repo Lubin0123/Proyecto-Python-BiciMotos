@@ -26,13 +26,13 @@ header {
 
 #texto-superpuesto {
     position: absolute;
-    top: -65px;
+    top: -52px;
     right: 0;
-    background-color: #ff9900; /* Color del contador del carrito */
+    background-color: #ff9900;
     color: #fff;
-    padding: 5px;
+    padding: 0px;
     border-radius: 50%;
-    margin-right: 160px;
+    margin-right: 96px;
     width: 30px;
 }
 
