@@ -93,7 +93,7 @@ def dashboard():
     if current_user.rol == 'administrador':
         return render_template('administrador/dashboard.html', data=data)  
     else:
-        user_name = current_user.nombreclientes
+        user_name = current_user.nombreClientes
         return f'Welcome, {user_name}! This is your dashboard.'
 
 @bp.route('/logout')

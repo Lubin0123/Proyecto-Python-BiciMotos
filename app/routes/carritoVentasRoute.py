@@ -30,7 +30,7 @@ def agregarAlCarrito(idProductos):
     cantidad = 1
     carritoVentas.agregarProducto(idProductos, cantidad)
     return redirect(url_for('carritos.vistaProductos'))
-    #return "Entra a agregar corrito"
+    
 
 @bp.route('/realizarCompra')
 def realizarCompra():
