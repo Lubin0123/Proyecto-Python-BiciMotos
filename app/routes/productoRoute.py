@@ -26,7 +26,7 @@ def add():
         
         return redirect(url_for('productos.index'))
     data = Productos.query.all()
-    return render_template('Productos/add.html', data=data)
+    return render_template('productos/add.html', data=data)
 
 @bp.route('/productos/edit/<int:idProductos>', methods=['GET', 'POST'])
 def edit(idProductos):
