@@ -49,7 +49,7 @@ def index():
             
         Detalles =DetalleVentas.query.filter_by(idFactura=new_FacturaVenta.idFacturaVentas).all()
 
-
+        carritoVentas.vaciarcarrito()
         return render_template('facturaVentas/vistaFactura.html', fecha=fechaFormateada, hora=formatoHora,subTotal=subTotal, total=subTotalFinal,DetalleVentas=Detalles, iva=iva, car=carritoVentas.getItems())
     return redirect(url_for('carritos.eliminarDelCarrito'))
 

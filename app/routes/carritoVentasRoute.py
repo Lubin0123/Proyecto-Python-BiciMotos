@@ -8,7 +8,8 @@ carritoVentas = CarritoVentas()
 
 @bp.route('/')
 def vistaProductos():
-    data = Productos.query.all()  
+    data = Productos.query.all()
+    print(carritoVentas.getItems())  
     tamano = tCarrito()  
     return render_template('index.html', data=data, tamano=tamano)
 
