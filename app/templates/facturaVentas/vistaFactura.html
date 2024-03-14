@@ -32,11 +32,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for producto in car %}
+                    {% for Detalles in Detalles %}
                         <tr>
-                            <td scope="row">{{ producto['producto'].idProductos }}</td>
-                            <td scope="row">{{ producto['producto'].descripcionProductos }}</td>
-                            <td scope="row">{{ producto['producto'].precioProductos }}</td>
+                            <td scope="row">{{ Detalles.producto.idProductos }}</td>
+                            <td scope="row">{{ Detalles.producto.descripcionProductos }}</td>
+                            <td scope="row">{{ Detalles.producto.precioProductos }}</td>
                         </tr>
                     {% endfor %}
 

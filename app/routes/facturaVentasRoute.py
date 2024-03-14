@@ -8,7 +8,7 @@ from flask_login import current_user
 from app.models.DetalleVenta import DetalleVentas
 
 bp = Blueprint('facturaVentas', __name__)
-
+Productos=Productos
 @bp.route('/facturaVenta')
 def index():
     
@@ -41,7 +41,7 @@ def index():
         db.session.commit()
 
         for carrito in carritoVentas.getItems():
-            idProductos = carrito["producto"].idProductos        
+            idProductos = carrito["producto"].idProductos      
             detallefactura = DetalleVentas(idDetalleVenta=None,cantidadDetalleVenta=1,idFactura=new_FacturaVenta.idFacturaVentas,idClientes=current_user.idClientes, idProductos=idProductos)
             db.session.add(detallefactura)
             db.session.commit() 
@@ -50,7 +50,8 @@ def index():
         Detalles =DetalleVentas.query.filter_by(idFactura=new_FacturaVenta.idFacturaVentas).all()
 
         carritoVentas.vaciarcarrito()
-        return render_template('facturaVentas/vistaFactura.html', fecha=fechaFormateada, hora=formatoHora,subTotal=subTotal, total=subTotalFinal,DetalleVentas=Detalles, iva=iva, car=carritoVentas.getItems())
+        return render_template('facturaVentas/vistaFactura.html', fecha=fechaFormateada, hora=formatoHora,subTotal=subTotal, total=subTotalFinal,iva=iva,Detalles=Detalles)
+
     return redirect(url_for('carritos.eliminarDelCarrito'))
 
 

@@ -10,7 +10,7 @@ class FacturaVentas(db.Model, UserMixin):
     idClientes = db.Column(db.Integer, db.ForeignKey('cliente.idClientes'), nullable=False)
     horaFacturaVentas = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
     totalFacturaVentas = db.Column(db.Integer, nullable=False)
-    producto = db.relationship("Productos", secondary="detalleVenta",back_populates="factura")
+    productos = db.relationship("Productos", secondary="detalleVenta",back_populates="facturas")
     
 
   

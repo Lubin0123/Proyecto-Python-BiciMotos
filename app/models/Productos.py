@@ -7,5 +7,6 @@ class Productos(db.Model):
     precioProductos = db.Column(db.String(255),nullable=False)
     cantidadProductos = db.Column(db.String(255), nullable=False)
     nombreImagen = db.Column(db.String(255))
-    factura = db.relationship("FacturaVentas", secondary="detalleVenta",back_populates="producto")
     informacionProductos = db.Column(db.String(3000),nullable=True)
+    facturas = db.relationship("FacturaVentas", secondary="detalleVenta",back_populates="productos")
+    

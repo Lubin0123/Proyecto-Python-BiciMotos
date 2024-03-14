@@ -11,3 +11,4 @@ class DetalleVentas(db.Model, UserMixin):
     idProductos = db.Column(db.Integer, db.ForeignKey('producto.idProductos'), nullable=False)
     idFactura = db.Column(db.Integer, db.ForeignKey('facturaVenta.idFacturaVentas'), nullable=False)
     idClientes = db.Column(db.Integer, db.ForeignKey('cliente.idClientes'), nullable=False)
+    producto= db.relationship("Productos")
