@@ -11,7 +11,7 @@ migrate = Migrate()
 def create_app():
     app = Flask(__name__)
 
-    app.config['SECRET_KEY'] = os.urandom(24)
+    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
     app.config.from_object('config.Config')
     #bcrypt = Bcrypt(app)
     db.init_app(app)
