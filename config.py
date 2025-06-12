@@ -15,4 +15,4 @@ class DevelopmentConfig(Config):
 #  SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:HHGDd16cE62aB5BfG6CgCDDB64b4CC6g@roundhouse.proxy.rlwy.net:40202/motos2'
 class ProductionConfig(Config):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:HDfHIOyjSVfQKLAnqJuIhJhylDwDIsnb@mysql.railway.internal:3306/railway'
